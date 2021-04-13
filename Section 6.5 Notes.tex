@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+
+\title{Section 6.5 Notes}
+
+\begin{document}
+\maketitle
+
+\section*{6.5.6}
+
+If a force of 90 N stretches a spring 1 m beyond its natural length, how much work does it take to stretch the spring 5 m beyond its natural length?\\
+
+By Hooke's Law the force, $F$ (here in Newton's) required to stretch a spring $x$ meters beyond its natural length is given by:
+
+$$F(x) = kx \,$$
+
+where the proportionality constant $k$ is specific to the spring we are working with. By the question statement, this gives us $$
+90 \,\text{N} = k (1 \, \text{m}) \implies k = 90\, \text{N/m} \;.$$
+
+Since we are asked to find the work required to stretch the spring from 0 meters beyond its natural length to 5 meters beyond its natural length, we integrate force from $x = 0$ to $x = 5$ to find the work, $W$, done:
+
+$$W = \int_{0}^{5} F(x) \, dx = 90x \,dx = 90(\frac{5^2}{2}) = 1125 \, \text{Nm} \;.$$
+
+\section*{6.5.13}
+
+This is an assigned problem so the answer will not be provided here. In order to find the work done you need to integrate the force function $F(x) = m(x) \, g$, where the mass $m$, in kilograms, is linear function of distance $x$, in meters, the water has been lifted above the ground. The function $m(x)$ (this does not denote $m\times x$ but instead indicates that $m$ is a function of $x$) should attain the values $m(0) = 5$ and $m(20) = 0$ according to the story. 
+
+\section*{Pumping Liquids from Containers}
+
+See Example 4 from this link for a good example on how to think about these types of work problems:
+
+http://tutorial.math.lamar.edu/Classes/CalcI/Work.aspx
+
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+
+\title{Section 7.1 Notes}
+
+\begin{document}
+\maketitle
+
+\section*{7.1.12}
+
+Evaluate the integral
+
+$$I = \int \frac{ln(ln(x))}{xln(x)} \, dx \;.$$
+
+Let $u = ln(x)$ so that $du = \frac{1}{x} \, dx \implies x \, du = dx$. By substitution,
+
+$$I = \int \frac{ln(u)}{xu} x \, du = \int \frac{ln(u)}{u}  \, du\,.$$
+
+Making a second substitution $w = ln(u)$, we get
+
+$$I = \int \frac{ln(u)}{u}  \, du\, = \int w \, dw = \frac{w^2}{2}+C\;.$$
+
+We need to express our answer in terms of $x$ since this is the variable the problem actually began with. Therefore,
+
+$$I = \frac{w^2}{2}+C = \frac{(ln(u))^2}{2}+C = \frac{[ln(ln(x))]^2}{2}+C \;.$$
+
+\section*{7.1.28}
+
+Evaluate the integral
+
+$$I = \int_{-2}^{0} 5^{-\theta} \, d\theta \;.$$
+
+We should consider the result given on page 431, which states that for $a>0$,
+
+$$\int a^u \, du = \frac{a^u}{\text{ln }a} + C \;.$$
+
+This tells us the indefinite integral, which can be used to find a similar definite integral. To fit this form, we can make the substition $u = -\theta$ or use properties of exponents to rewrite $I$ as $$ I = \int_{-2}^{0} \left(\frac{1}{5}\right)^\theta \, d\theta \;.$$
+
+Since $\frac{1}{5} > 0$, the result from page 431 applies and so
+
+$$I = \int_{-2}^{0} \left(\frac{1}{5}\right)^\theta \, d\theta = \frac{\left(\frac{1}{5}\right)^\theta}{\text{ln } \frac{1}{5}} \big\rvert_{-2}^{0} =\frac{5^{-\theta}}{\text{ln } \frac{1}{5}}\big\rvert_{-2}^{0} = -\frac{5^{-\theta}}{\text{ln } 5}\big\rvert_{-2}^{0} = -\frac{1}{\text{ln } 5}(5^0 - 5^2) = \frac{24}{\text{ln } 5}\;.$$
+
+\section*{7.1.46}
+
+Evaluate the integral
+
+$$I = \int \frac{dx}{x(\text{log}_8x)^2} \;.$$
+
+Using the logarithm definition, let $y = \text{log}_8x \implies 8^y = x \implies \text{ln }8^y = \text{ln } x \implies  y = \frac{1}{\text{ln }8} \text{ln } x$. Rewrite $I$ using this to get
+
+$$I = \int \frac{dx}{x(\frac{1}{\text{ln }8} \text{ln } x)^2} =\text{ln}^2 \,8 \int \frac{dx}{x (\text{ln } x)^2} \;.$$
+
+Let $u = \text{ln } x$. Then,
+
+$$I = \text{ln}^2 \,8 \int u^-2 \, du = -(\text{ln}^2 \,8)u^{-1} + C = -\frac{\text{ln}^2 \,8}{\text{ln }x} + C \;.$$
+\end{document}

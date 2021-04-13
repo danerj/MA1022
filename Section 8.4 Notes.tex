@@ -1,0 +1,30 @@
+\documentclass[11pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{graphics}
+
+\title{Section 8.4 Notes}
+
+\begin{document}
+\maketitle
+
+\section*{Conference Example}
+
+\begin{align*}
+&\int \frac{\sqrt{9-x^2}}{x^2} \, dx\\
+&x=3\text{sin}(\theta) \quad -\pi/2 \leq \theta \leq \pi/2 \quad dx = 3\text{cos}(\theta) d\theta\\
+&\int \frac{\sqrt{9-9\text{sin}^2(\theta)}}{9\text{sin}^2(\theta)}3\text{cos}(\theta) \, d\theta\\
+&=\int \frac{9\sqrt{1-\text{sin}^2(\theta)}\text{cos}(\theta)}{9\text{sin}^2(\theta} \, d\theta\\
+&= \int\frac{\text{cos}^2(\theta}{\text{sin}^2(\theta)} \, d\theta\\
+&=\int \text{cot}^2(\theta) \, d\theta \\
+&= \int (\text{csc}^2(\theta) -1)\, d\theta \\
+&= -\text{cot}(\theta) - \theta + C\\
+&=-\frac{\sqrt{9-x^2}}{x} - \text{arcsin}(\frac{x}{3}) + C
+\end{align*}
+
+\includegraphics {triangle.png}
+
+\end{document}

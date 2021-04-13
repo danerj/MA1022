@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{amsmath, array}
+\usepackage{graphics}
+
+\title{Section 8.5 Notes}
+
+\begin{document}
+\maketitle
+
+\section*{8.5.2}
+
+Expand the quotient by partial fractions:
+
+$$\frac{5x-7}{x^2-3x+2} = \frac{5x-7}{(x-2)(x-1)}$$
+
+Before doing anything else, check that the degree of the numerator is strictly less than the degree of the denominator. Otherwise you'll end up doing a lot of algebra only to find out that partial fractions 'breaks'...yes the degree of the numerator is 1 and the degree of the denominator is 2. 
+
+
+$$\frac{5x-7}{(x-2)(x-1)} = \frac{A}{x-2} + \frac{B}{x-1}$$
+$$5x-7 = A(x-1) + B(x-2)$$
+$$5x-7 = (A+B)x + (-A-2B)$$
+Matching the $'x'$ coefficients on both sides and matching the constants on both sides gives two equations:
+$$5 = A+B \quad -7 = -A-2B$$
+Solve this system of equations however you prefer. The result is 
+$A = 3, B= 2$. Conclude that:
+
+$$\frac{5x-7}{(x-2)(x-1)} = \frac{A}{x-2} + \frac{B}{x-1} = \frac{3}{x-2} + \frac{2}{x-1}$$
+
+This means that if we were asked to evaluate $\int \frac{5x-7}{(x-2)(x-1)} \, dx$, it would be the same thing as evaluate $\int (\frac{3}{x-2} + \frac{2}{x-1}) \, dx$. The second integral is easier to find. 
+
+\section*{8.5.8}
+
+Expand the quotient by partial fractions:
+
+$$\frac{t^4+9}{t^4+9t^2}$$
+
+The degree of the numerator is not less than the degree of the denominator, so first long division:
+
+
+\begin{align*}                                                                      
+  \renewcommand\arraystretch{2}                                                     
+  \begin{array}{r@{\hskip\arraycolsep}c@{\hskip\arraycolsep}l*2r}                   
+    &&1\\[.1cm]                                                                      
+    \cline{2-3}                                                                     
+    t^4+9t^2 &\Bigg)&t^4+9\\[.1cm]                     
+    &&-(t^4+9t^2)\\[.1cm]                           
+    \cline{2-3}                                                                     
+    &&\hfill-9t^2+9\\[.1cm]                                                         
+  \end{array}                                                                       
+\end{align*}
+
+$$\frac{t^4+9}{t^4+9t^2} = 1 + \frac{-9t^2+9}{t^4+9t^2} = 1 + \frac{-9t^2+9}{t^2(t^2+9)}$$
+
+Just work with the fraction part for now.
+
+$$ \frac{-9t^2+9}{t^2(t^2+9)} = \frac{A}{t} + \frac{B}{t^2} + 
+\frac{Ct + D}{t^2+9}$$
+$$-9t^2 + 9 = At(t^2+9) + B(t^2+9) + (Ct+D)t^2$$
+
+$$-9t^2 + 9 = (A+C)t^3 + (B+D)t^2 + (9A)t + 9B$$
+
+Equating coefficients gives the four equations:
+
+$$0 = A+C$$
+$$-9 = B+D$$
+$$0 = A$$
+$$9 = 9B$$
+
+This system has the solution $A = 0, B = 1, C = 0, D = -10$. Conclude that 
+$$\frac{t^4+9}{t^4+9t^2} = 1 + \frac{-9t^2+9}{t^2(t^2+9)} = \frac{A}{t} + \frac{B}{t^2} + 
+\frac{Ct + D}{t^2+9} = 1 + \frac{1}{t^2} - \frac{10}{t^2+9}$$
+
+\end{document}
